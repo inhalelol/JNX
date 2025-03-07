@@ -80,7 +80,7 @@ final public class HelpPane extends javax.swing.JPanel {
     void setupHelp() {
         String fn = "help/JNXHelp.html";
         try {
-            InputStream is = parent.getClass().getResourceAsStream(fn);
+            InputStream is = parent.getClass().getClassLoader().getResourceAsStream(fn);
             InputStreamReader isr = new InputStreamReader(is);
             BufferedReader br = new BufferedReader(isr);
             StringBuilder sb = new StringBuilder();
@@ -99,7 +99,7 @@ final public class HelpPane extends javax.swing.JPanel {
             s = s.replaceAll("\\(version\\)", parent.app_version);
             helpTextPane.setText(s);
             helpTextPane.select(0, 0);
-            URL url = parent.getClass().getResource(fn).toURI().toURL();
+            URL url = parent.getClass().getClassLoader().getResource(fn).toURI().toURL();
             ((HTMLDocument) helpTextPane.getDocument()).setBase(url);
         } catch (Exception e) {
             System.out.println(e);
