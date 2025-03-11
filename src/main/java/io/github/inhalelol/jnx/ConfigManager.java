@@ -59,13 +59,16 @@ final public class ConfigManager {
             Field f = fi.next();
             name = f.getName();
             try {
+                f.setAccessible(true);
                 Object obj = f.get(parent);
                 String t = (obj.getClass().getGenericInterfaces()[0]).toString();
-                if (t.equals("interface jnx.ControlInterface")) {
+                if (t.equals("interface io.github.inhalelol.jnx.ControlInterface")) {
                     map.put(name, (ControlInterface) obj);
                 }
             } catch (Exception e) {
-                //System.out.println(e + " = " + name);
+                // TODO: Fix ArrayIndexOutOfBoundsException
+                // TODO: Fix NullPointerException
+                System.out.println(e + " = " + name);
             }
         }
     }
