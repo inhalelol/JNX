@@ -4,113 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f55cdda1-db18-4bb6-a0cd-0a5f35bdfc90" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/inhalelol/jnx/BiQuadraticFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/inhalelol/jnx/CCIR476.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/inhalelol/jnx/ComboBoxController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/inhalelol/jnx/ComboBoxTextController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/inhalelol/jnx/Complex.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/inhalelol/jnx/ConfigManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/inhalelol/jnx/ControlInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/inhalelol/jnx/FFT.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/inhalelol/jnx/FFTPrecalc.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/inhalelol/jnx/FrameController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/inhalelol/jnx/HelpPane.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/inhalelol/jnx/JNX.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/inhalelol/jnx/MessageFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/inhalelol/jnx/MessageFilterDialog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/inhalelol/jnx/NavtexReceiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/inhalelol/jnx/ScopePanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/inhalelol/jnx/SpectrumDisplayManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/inhalelol/jnx/TabPanelController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/inhalelol/jnx/TextFieldController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/inhalelol/jnx/ToggleButtonController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/graphics/app_image1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/graphics/app_image2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/graphics/bandpass.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/graphics/bandpass_high.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/graphics/bandpass_low.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/graphics/bandpass_ok.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/graphics/jnx_detector_transfer_function.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/graphics/lowpass_high.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/graphics/lowpass_low.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/graphics/lowpass_ok.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/graphics/mark_space_bandpass.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/graphics/spectrum_bandpass_filter.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/graphics/spectrum_mark_filter.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/graphics/spectrum_no_filter.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/graphics/system_diagram.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/graphics/transfer_function.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/graphics/transfer_function_equation.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/help/JNXHelp.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/JNX_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/go-next.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/go-previous.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manifest.mf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nbproject/build-impl.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nbproject/genfiles.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nbproject/private/config.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nbproject/private/private.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nbproject/private/private.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nbproject/project.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nbproject/project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jnx/BiQuadraticFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jnx/CCIR476.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jnx/ComboBoxController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jnx/ComboBoxTextController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jnx/Complex.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jnx/ConfigManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jnx/ControlInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jnx/FFT.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jnx/FFTPrecalc.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jnx/FrameController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jnx/HelpPane.form" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jnx/HelpPane.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jnx/JNX.form" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jnx/JNX.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jnx/MessageFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jnx/MessageFilterDialog.form" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jnx/MessageFilterDialog.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jnx/NavtexReceiver.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jnx/ScopePanel.form" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jnx/ScopePanel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jnx/SpectrumDisplayManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jnx/TabPanelController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jnx/TextFieldController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jnx/ToggleButtonController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jnx/graphics/app_image1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jnx/graphics/app_image2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jnx/graphics/bandpass.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jnx/graphics/bandpass_high.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jnx/graphics/bandpass_low.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jnx/graphics/bandpass_ok.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jnx/graphics/jnx_detector_transfer_function.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jnx/graphics/lowpass_high.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jnx/graphics/lowpass_low.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jnx/graphics/lowpass_ok.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jnx/graphics/mark_space_bandpass.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jnx/graphics/spectrum_bandpass_filter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jnx/graphics/spectrum_mark_filter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jnx/graphics/spectrum_no_filter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jnx/graphics/system_diagram.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jnx/graphics/transfer_function.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jnx/graphics/transfer_function_equation.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jnx/help/JNXHelp.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jnx/images/JNX_icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jnx/images/go-next.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jnx/images/go-previous.png" beforeDir="false" />
+    <list default="true" id="f55cdda1-db18-4bb6-a0cd-0a5f35bdfc90" name="Changes" comment="Fix rw config file">
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/inhalelol/jnx/SerialComm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/inhalelol/jnx/JNX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/inhalelol/jnx/JNX.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/inhalelol/jnx/NavtexReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/inhalelol/jnx/NavtexReceiver.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,6 +44,12 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="JNX" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="application" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="JNX" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="build" type="c8890929:TasksNode$1" />
               </path>
             </expand>
@@ -153,12 +59,19 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2tx9ODW5qQxYhArIHfMe3tkYCXt" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -167,21 +80,26 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Gradle.Download Sources.executor": "Run",
     "Gradle.JNX [assemble].executor": "Run",
     "Gradle.JNX [build].executor": "Run",
     "Gradle.JNX [jar].executor": "Run",
+    "Gradle.JNX [run].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "gradle",
+    "git-widget-placeholder": "serial-port",
     "jdk.selected.JAVA_MODULE": "21",
     "kotlin-language-version-configured": "true",
-    "project.structure.last.edited": "Modules",
+    "last_opened_file_path": "D:/Marineq/GitHub/JNX",
+    "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.JNX [build]">
+  <component name="RunManager" selected="Gradle.JNX [run]">
     <configuration name="JNX [assemble]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -248,8 +166,31 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="JNX [run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="run" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.JNX [run]" />
         <item itemvalue="Gradle.JNX [build]" />
         <item itemvalue="Gradle.JNX [jar]" />
         <item itemvalue="Gradle.JNX [assemble]" />
@@ -265,6 +206,39 @@
       <option name="presentableId" value="Default" />
       <updated>1741282826487</updated>
     </task>
+    <task id="LOCAL-00001" summary="Fix load help file">
+      <option name="closed" value="true" />
+      <created>1741331727716</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1741331727716</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Fix rw config file">
+      <option name="closed" value="true" />
+      <created>1741671167631</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1741671167631</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Fix load help file" />
+    <MESSAGE value="Fix rw config file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix rw config file" />
   </component>
 </project>

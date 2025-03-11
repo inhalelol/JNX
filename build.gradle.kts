@@ -3,7 +3,7 @@ plugins {
 }
 
 group = "io.github.inhalelol.jnx"
-version = "1.4"
+version = "1.5.0"
 
 tasks.withType<Jar> {
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
@@ -19,6 +19,8 @@ repositories {
 dependencies {
     testImplementation(platform("org.junit:junit-bom:5.9.1"))
     testImplementation("org.junit.jupiter:junit-jupiter")
+    // https://mvnrepository.com/artifact/com.fazecast/jSerialComm
+    implementation("com.fazecast:jSerialComm:2.11.0")
 }
 
 application {

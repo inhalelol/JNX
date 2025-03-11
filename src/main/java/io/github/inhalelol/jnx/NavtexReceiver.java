@@ -506,7 +506,7 @@ final public class NavtexReceiver extends Thread {
     private void filter_print(int c) {
         if (c == char_bell) {
             parent.beep();
-        } else if (c != -1 && c != '\r' && c != code_alpha && c != code_rep) {
+        } else if (c != -1 && c != code_alpha && c != code_rep) {
             parent.append_to_data_page("" + (char) c);
         }
     }

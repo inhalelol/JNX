@@ -42,12 +42,15 @@ import java.awt.Toolkit;
  */
 final public class JNX extends javax.swing.JFrame implements ClipboardOwner {
 
-    final String app_version = "1.4";
+    final String app_version = "1.5.0";
     boolean debug = false;
     java.util.List<String> data_rates = Arrays.asList(
             "12000", "16000", "24000", "32000", "48000", "96000");
     java.util.List<String> spectrum_choices = Arrays.asList(
             "No filter", "Space filter", "Mark filter");
+    java.util.List<String> serial_ports_choises = new ArrayList<>();
+    java.util.List<String> serial_baud_choises = Arrays.asList(
+            "4800", "9600", "19200", "115200");
     final String app_path, app_name, program_name, user_dir, data_path, init_path, file_sep;
     int timer_period_ms = 250;
     Timer periodic_timer = null;
@@ -61,13 +64,17 @@ final public class JNX extends javax.swing.JFrame implements ClipboardOwner {
     ToggleButtonController navtex_filter, scroll_to_bottom, log_data, inverse_logic;
     ToggleButtonController configuration_visible, time_scope_sync, spectrum_scope_sync;
     ToggleButtonController strict;
+    ToggleButtonController en_serial;
     ComboBoxController audio_source, audio_dest, sample_rate;
     ComboBoxTextController spectrum_selection;
+    ComboBoxTextController serial_port_selection;
+    ComboBoxTextController serial_baud_selection;
     TextFieldController center_frequency, baud_rate;
     TextFieldController time_scope_hcontrol, time_scope_vcontrol, spectrum_scope_hcontrol, spectrum_scope_vcontrol, monitor_volume;
     FrameController appsize;
     MessageFilter accepted_navtex_messages;
     BufferedWriter log_buffer = null;
+    SerialComm s_sender;
     File log_file = null;
     String log_path = null;
     boolean scope_visible = false;
@@ -100,12 +107,17 @@ final public class JNX extends javax.swing.JFrame implements ClipboardOwner {
         receiver = new NavtexReceiver(this);
         time_scope_pane = new ScopePanel(this, "Time Domain", false);
         spectrum_scope_pane = new ScopePanel(this, "Frequency/Spectrum Domain", true);
+        s_sender = new SerialComm(this);
+        serial_ports_choises.addAll(s_sender.get_ports_names());
         java.awt.GridBagConstraints gbc = new java.awt.GridBagConstraints();
         gbc.fill = java.awt.GridBagConstraints.BOTH;
         gbc.weightx = 1.0;
         gbc.weighty = 1.0;
         scope_container.add(time_scope_pane, gbc);
         scope_container.add(spectrum_scope_pane, gbc);
+        serial_port_container.add(serial_checkbox);
+        serial_port_container.add(serial_ports_combobox);
+        serial_port_container.add(serial_baud_combobox);
         time_scope_hcontrol = time_scope_pane.horizontal_control;
         time_scope_vcontrol = time_scope_pane.vertical_control;
         spectrum_scope_hcontrol = spectrum_scope_pane.horizontal_control;
@@ -114,6 +126,7 @@ final public class JNX extends javax.swing.JFrame implements ClipboardOwner {
         spectrum_scope_sync = spectrum_scope_pane.sync_with_signal;
         spectrum_manager = new SpectrumDisplayManager(this, spectrum_scope_pane);
         setup_control_values();
+        s_sender.set_port(serial_port_selection.get_value());
         receiver.control(true);
         Runtime.getRuntime().addShutdownHook(new Thread() {
 
@@ -157,9 +170,12 @@ final public class JNX extends javax.swing.JFrame implements ClipboardOwner {
         selected_tab = new TabPanelController(tabbed_pane, 0);
         data_textarea.getCaret().setVisible(true);
         strict = new ToggleButtonController(strict_checkbox, false);
+        en_serial = new ToggleButtonController(serial_checkbox, false);
         navtex_filter = new ToggleButtonController(navtex_filter_checkbox, false);
         scroll_to_bottom = new ToggleButtonController(scroll_to_bottom_checkbox, true);
         spectrum_selection = new ComboBoxTextController(spectrum_combobox, spectrum_choices, "No filter");
+        serial_port_selection = new ComboBoxTextController(serial_ports_combobox, serial_ports_choises, serial_ports_choises.getFirst());
+        serial_baud_selection = new ComboBoxTextController(serial_baud_combobox, serial_baud_choises, serial_baud_choises.getFirst());
         sample_rate = new ComboBoxController(data_rate_combobox, data_rates, "" + receiver.default_sample_rate);
         java.util.List<String> sdata = make_mixer_description_list(receiver.target_mixer_list, null);
         List<String> data = make_numeric_list(1, receiver.source_mixer_list.size() + 1, 1);
@@ -193,6 +209,7 @@ final public class JNX extends javax.swing.JFrame implements ClipboardOwner {
             baud_rate.set_value(receiver.default_baud_rate);
             inverse_logic.set_value(false);
             strict.set_value(false);
+            en_serial.set_value(false);
         }
     }
 
@@ -247,6 +264,7 @@ final public class JNX extends javax.swing.JFrame implements ClipboardOwner {
             try {
                 log_buffer.write(s);
                 log_buffer.flush();
+                if (en_serial.get_value()) s_sender.write_serial(s);
                 //p(s);
             } catch (Exception e) {
                 trace_errors("", e);
@@ -367,6 +385,7 @@ final public class JNX extends javax.swing.JFrame implements ClipboardOwner {
         receiver.end_thread();
         control_logging(false);
         config_mgr.write_config_file();
+        s_sender.closePort();
     }
 
     public <T> void p(T s) {
@@ -400,6 +419,7 @@ final public class JNX extends javax.swing.JFrame implements ClipboardOwner {
         clipboard_button = new javax.swing.JButton();
         clear_button = new javax.swing.JButton();
         scope_container = new javax.swing.JPanel();
+        serial_port_container = new javax.swing.JPanel();
         bottom_panel_a = new javax.swing.JPanel();
         machine_state_label = new javax.swing.JLabel();
         volume_label = new javax.swing.JLabel();
@@ -417,6 +437,8 @@ final public class JNX extends javax.swing.JFrame implements ClipboardOwner {
         audio_dest_combobox = new javax.swing.JComboBox();
         jLabel9 = new javax.swing.JLabel();
         spectrum_combobox = new javax.swing.JComboBox();
+        serial_ports_combobox = new javax.swing.JComboBox();
+        serial_baud_combobox = new javax.swing.JComboBox();
         defaults_button = new javax.swing.JButton();
         bottom_panel_c = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
@@ -428,6 +450,7 @@ final public class JNX extends javax.swing.JFrame implements ClipboardOwner {
         message_filter_button = new javax.swing.JButton();
         inverted_checkbox = new javax.swing.JCheckBox();
         strict_checkbox = new javax.swing.JCheckBox();
+        serial_checkbox = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(600, 400));
@@ -490,6 +513,11 @@ final public class JNX extends javax.swing.JFrame implements ClipboardOwner {
 
         scope_container.setLayout(new java.awt.GridBagLayout());
         tabbed_pane.addTab("Time/Frequency Display", scope_container);
+        serial_port_container.setLayout(new java.awt.GridBagLayout());
+        tabbed_pane.addTab("Serial Port", serial_port_container);
+
+        serial_checkbox.setText("Enable output");
+        serial_checkbox.setToolTipText("Enable/disable serial output");
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
@@ -648,6 +676,12 @@ final public class JNX extends javax.swing.JFrame implements ClipboardOwner {
         gridBagConstraints.weightx = 0.5;
         gridBagConstraints.insets = new java.awt.Insets(0, 2, 0, 2);
         bottom_panel_b.add(spectrum_combobox, gridBagConstraints);
+
+        serial_ports_combobox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "COM1", "COM2", "COM3", "COM4" }));
+        serial_ports_combobox.setToolTipText("Choose a serial port");
+
+        serial_baud_combobox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "4800", "9600", "19200", "115200" }));
+        serial_baud_combobox.setToolTipText("Choose a serial baud");
 
         defaults_button.setText("Defaults");
         defaults_button.setToolTipText("Set all default values");
@@ -855,9 +889,13 @@ final public class JNX extends javax.swing.JFrame implements ClipboardOwner {
     protected javax.swing.JCheckBox navtex_filter_checkbox;
     private javax.swing.JButton quit_button;
     private javax.swing.JPanel scope_container;
+    private javax.swing.JPanel serial_port_container;
     private javax.swing.JCheckBox scroll_to_bottom_checkbox;
     private javax.swing.JComboBox spectrum_combobox;
+    private javax.swing.JComboBox serial_ports_combobox;
+    private javax.swing.JComboBox serial_baud_combobox;
     private javax.swing.JCheckBox strict_checkbox;
+    private javax.swing.JCheckBox serial_checkbox;
     private javax.swing.JTabbedPane tabbed_pane;
     private javax.swing.JPanel text_display_panel;
     private javax.swing.JLabel volume_label;
